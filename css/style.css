@@ -1,0 +1,89 @@
+body{
+    background: #f6f5f4;
+    color: #333;
+}
+
+.box {
+    text-align: center;
+    font-size: 36px;
+}
+
+.box2 {
+    background-color: green;
+}
+    
+.tou {
+     text-align: center; 
+}
+
+.main{
+    width: 1600px;
+    margin: 30px auto;
+}
+
+.slider{
+    /* スライドを表示させる画面の横幅(≒スライド１枚あたりの横幅) */
+    width: 1600px;
+    /* スライドを表示させる画面の縦幅(≒スライド１枚あたりの縦幅) */
+    height: 1066px;
+    /* はみ出した要素は隠れるようにする */
+    overflow: hidden;
+}
+.slider__container{
+    /* スライドを表示する画面とスライド１枚をぴったり合わせるため設定 */
+    padding: 0;
+    margin: 0;
+    
+    /* 子要素でfloatを利用しているため設定 */
+    overflow: hidden;
+
+    list-style: none;
+
+    /* 後ほどJSでleftプロパティを設定するため必要 */
+    position: relative;
+
+}
+.slider__item{
+    /* スライド１枚あたりの横幅 */
+    width: 1400px;
+    /* スライド１枚あたりの縦幅 */
+    height: 700px;
+    /* スライドを横一列に並べる */
+    float: left;
+}
+
+.cover{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    /* ボタンを押す前は見えないようにメニューは画面外にずらす */
+    transform: translateY(-100%);
+    transition: .5s;
+}
+
+.list{
+    font-size: 100px;
+    color: red;
+    text-align: center;
+}
+
+/*ボタンをクリックするとactiveクラスが付与される*/
+.active{
+    /* Y方向に要素を移動させる */
+    transform: translateY(0%);
+    transition: .5s;
+}
+
+.btn{
+    cursor: pointer;
+    font-size: 100px;
+    border: 1px solid black;
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+}
